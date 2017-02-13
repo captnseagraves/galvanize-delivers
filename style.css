@@ -1,0 +1,20 @@
+.caption h3 {
+  style: bold;
+}
+
+.slider .indicators .indicator-item {
+display: none;
+}
+.material-icons {
+  color: #ec407a;
+  }
+
+.icon-text{
+  color:#ec407a;
+  /*font: Roboto-Bold.ttf;*/
+
+}
+
+#fine-dining{
+  margin-top: 75px;
+}
