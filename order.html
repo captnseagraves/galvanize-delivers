@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Order Galvanize</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="main2.js"></script>
+</head>
+
+<body class="flow-text">
+    <nav>
+        <div class="nav-wrapper blue darken-1">
+            <a href="index.html" class="brand-logo">Galvanize Delivers</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <!-- <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li> -->
+                <li><a href="order.html">Order Delivery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class='menu container flow-text'>
+        <div class="row">
+
+            <div class="center-align left col s12 m7 l7">
+                <h2 class='flow-text center'>Menu</h2>
+
+                <div class="row">
+                    <!-- burger card -->
+                    <div class="col s12 m12 l6">
+                        <div class="burger card">
+                            <div class="card-image">
+                                <img src="img/burger.jpg">
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content flow-text">
+                                <h4 class="menuText flow-text">gBurger</h4>
+
+                                <h5 class='flow-text price'>$12.95</h5>
+
+                            </div>
+                            <div class="card-action" id="burgerOrder">
+                                <a href="#">Add to order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ice cream card -->
+                    <div class="col s12 m12 l6">
+                        <div class="ice_cream card">
+                            <div class="card-image">
+                                <img src="img/ice_cream.jpg">
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="menuText flow-text">gCream</h4>
+
+                                <h5 class="flow-text price">$3.95</h5>
+                            </div>
+                            <div class="card-action" id="iceCreamOrder">
+                                <a href="#">Add to order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- pizza card -->
+                    <div class="col s12 m12 l6">
+                        <div class="pizza card">
+                            <div class="card-image">
+                                <img src="img/pizza.jpg">
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="menuText flow-text">gZaa</h4>
+
+                                <h5 class="flow-text price">$4.95</h5>
+                            </div>
+                            <div class="card-action" id="pizzaOrder">
+                                <a href="#">Add to order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ribs card -->
+                    <div class="col s12 m12 l6">
+                        <div class="ribs card">
+                            <div class="card-image">
+                                <img src="img/ribs.jpg">
+                                <span class="card-title"></span>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="menuText flow-text">gRibs</h4>
+
+                                <h5 class='flow-text price'>$14.95</h5>
+                            </div>
+                            <div class="card-action" id="ribsOrder">
+                                <a href="#">Add to order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center-align right col s12 m5 l5 ">
+                <p></p>
+                <h4 class='flow-text center'>Order</h4>
+                <table class="centered">
+                    <thead>
+                        <tr>
+                            <th data-field="name">Item Name</th>
+                            <th data-field="count">Qty.</th>
+                            <th data-field="price">Item Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tBod">
+
+                    </tbody>
+
+                    <div id="totals">
+                        <div class="float-right right-align">
+                            <tfoot id='tFoot' class="right-align">
+                                <hr>
+                                <tr id='subtotal' class="right-align">
+                                    <td id='sTotal'>Subtotal = </td>
+                                    <td id='sTotalAmount'></td>
+                                </tr>
+                                <tr id='tax' class="right-align">
+                                    <td id='taxy'>Tax = </td>
+                                    <td id='taxAmount'></td>
+
+                                </tr>
+                                <tr id='total' class="right-align">
+                                    <td id='tTotal'>Total = </td>
+                                    <td id='tTotalAmount'></td>
+
+                                </tr>
+                            </tfoot>
+                        </div>
+                    </div>
+                </table>
+
+
+
+            </div>
+            <!-- Personal information form  -->
+
+            <form class="col s12 m5 l5">
+                <hr>
+                <div class="row">
+                    <div class="input-field col s12 m12 l12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" required="" aria-required="true">
+                        <label for="icon_prefix">Full Name</label>
+                    </div>
+                    <div class="input-field col s12 m12 l12">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate" required="" aria-required="true">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                    <div class="input-field col s12 m12 l12">
+                        <i class="material-icons prefix">business</i>
+                        <input id="address" type="text" class="validate" required="" aria-required="true">
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="center-align">
+                        <button class="btn waves-effect waves-light pink lighten-1" type="submit" name="action" id='submitButton'>
+                          Submit your order
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <footer class="page-footer blue darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Galvanize Delivers</h5>
+                    <p class="grey-text text-lighten-4">Fine Dining, Delivered.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="order.html">Order Delivery</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright blue darken-4">
+            <div class="container">
+                © 2017 <a href="github.com/captnseagraves">Kevin Seagraves</a>
+
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
